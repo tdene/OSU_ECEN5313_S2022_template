@@ -1,0 +1,40 @@
+
+No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/rjridle/ldo.sch
+
+binary raw file "/home/rjridle/LDO.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+No. of Data Columns : 49  
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Note: One successful gmin step
+Trying gmin =   1.0000E-09 Note: One successful gmin step
+Trying gmin =   1.0000E-10 Note: One successful gmin step
+Trying gmin =   1.0000E-11 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+
+No. of Data Rows : 1
+
+Total analysis time (seconds) = 0.005
+
+Total elapsed time (seconds) = 37.217 
+
+Total DRAM available = 128721.316 MB.
+DRAM currently available = 41794.613 MB.
+Maximum ngspice program size =  738.906 MB.
+Current ngspice program size =  658.480 MB.
+
+Shared ngspice pages =    4.121 MB.
+Text (code) pages =    7.453 MB.
+Stack = 0 bytes.
+Library pages =  662.383 MB.
+

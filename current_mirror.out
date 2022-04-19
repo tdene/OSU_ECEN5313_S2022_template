@@ -1,0 +1,27 @@
+
+No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/rjridle/current_mirror.sch
+
+binary raw file "/home/rjridle/current_mirror.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+No. of Data Columns : 7  
+
+No. of Data Rows : 101
+
+Total analysis time (seconds) = 0.003
+
+Total elapsed time (seconds) = 36.985 
+
+Total DRAM available = 128721.316 MB.
+DRAM currently available = 45648.980 MB.
+Maximum ngspice program size =  738.930 MB.
+Current ngspice program size =  658.539 MB.
+
+Shared ngspice pages =    4.148 MB.
+Text (code) pages =    7.453 MB.
+Stack = 0 bytes.
+Library pages =  662.406 MB.
+
