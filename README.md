@@ -16,6 +16,16 @@ servers with git clone, with a command like:
 git clone https://github.com/url_to_your_project
 ```
 
+A full list of the OSU ECEN servers can be seen below:
+```
+shire.ecen.okstate.edu
+moria.ecen.okstate.edu
+angmar.ecen.okstate.edu
+bree.ecen.okstate.edu
+combe.ecen.okstate.edu
+dale.ecen.okstate.edu
+```
+
 You can find a handy cheatsheet of git commands
 [here](https://education.github.com/git-cheat-sheet-education.pdf).
 
