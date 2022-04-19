@@ -86,9 +86,10 @@ two different schematics.
 To run Ngspice simulations, remember to have the MODELS code block in
 your top level design. If any changes were made to the schematic since
 the last time you generated the netlist, make sure to hit the netlist button
-again before hitting the simulation button. Ngspice works of the .spice file
-found in you current working directory. If the .spice file is out of date with
-your schematic, you won't see the changes show up in simulation.
+again before hitting the simulation button. Ngspice works off the .spice file
+with the same name as your schematic, found in you current working directory. 
+If the .spice file is out of date with your schematic, you won't see the changes
+show up in simulation.
 
 ## Manuals and Help
 For help with Ngspice and writing simulations, see [here](http://ngspice.sourceforge.net/docs/ngspice-manual.pdf).
