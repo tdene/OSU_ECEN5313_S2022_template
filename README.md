@@ -1,9 +1,26 @@
 # Template folder for OSU ECEN5313 Spring 2022 final project
 
-## Getting started with GitHub
+## Making a GitHub account
 
 First, make a github account if you do not already have one by navigating to
 the following link: [github.com/join](https://github.com/join).
+
+## Getting on the servers
+
+Follow the instructions from the tutorial posted in Canvas to ssh and VNC into
+the servers.
+
+A full list of the OSU ECEN servers can be found below:
+```
+shire.ecen.okstate.edu
+moria.ecen.okstate.edu
+angmar.ecen.okstate.edu
+bree.ecen.okstate.edu
+combe.ecen.okstate.edu
+dale.ecen.okstate.edu
+```
+
+## Setting up GitHub for your account
 
 On the servers, it is useful to set your git username and email
 so that git can reference it when performing pushes. To do this, run these two
@@ -17,33 +34,7 @@ $ git config --global user.email 'YourEmail'
 Make sure to use your GitHub username and the email you used when creating your
 GitHub account.
 
-Now that you have an account, fork this repository. Look at the top right of
-the GitHub page. Click the middle button called "Fork".
-
-This will make a personal copy of the repository. Click the green "Code"
-button, and copy the address under HTTPS. **You must have generated an SSH key
-and added it to GitHub before you can clone using the SSH link.**. If you 
-have not yet done this, see [Setting up SSH Key](#setting-up-ssh-authentication-for-github).
-After setting up an SSH key, You can now clone it on the servers with a command like:
-
-```
-git clone git@github.com:rjridle/OSU_ECEN5313_S2022_template.git
-```
-
-A full list of the OSU ECEN servers can be seen below:
-```
-shire.ecen.okstate.edu
-moria.ecen.okstate.edu
-angmar.ecen.okstate.edu
-bree.ecen.okstate.edu
-combe.ecen.okstate.edu
-dale.ecen.okstate.edu
-```
-
-You can find a handy cheatsheet of git commands
-[here](https://education.github.com/git-cheat-sheet-education.pdf).
-
-## Setting up SSH Authentication for GitHub
+### Setting up SSH Authentication for GitHub
 Setting up an SSH key will allow GitHub to authenticate that it is really
 you when trying to clone, push, pull, etc. or do anything with git. Having
 an SSH key will allow you to not have to enter a token every time you want
@@ -55,13 +46,13 @@ to run a git command. To set up:
    $ ssh-keygen -t ed25519 -C "your_email@example.com"
    ```
 
-   Make sure to subsitute the email you used when creating you
+   Make sure to subsitute the email you used when creating your
    GitHub account. Some prompts will then come up asking you to
    specify a folder to save the key to, and a passphrase to add
    to the key. For all of these, just hit enter. 
 
    ```
-   > Enter a file in which to save the key (/c/Users/you/.ssh/id_algorithm):[Press enter]
+   > Enter a file in which to save the key (/home/tdene/.ssh/id_rsa): [Press enter]
    > Enter passphrase (empty for no passphrase): [Press enter]
    > Enter same passphrase again: [Press enter]
    ```
@@ -102,16 +93,31 @@ to run a git command. To set up:
 
 9. Click `Add SSH Key` and you are done.
 
-**IMPORTANT**: From now on, when cloning any repository, use the SSH link instead of the HTTPS link.
-For example, to clone the template repo you would run:
+From now on, when cloning any repository, you get to use the SSH link instead of the HTTPS link. This is far more convenient. For example, to clone the template repo you would run:
 
 ```
 git clone git@github.com:rjridle/OSU_ECEN5313_S2022_template.git
 ```
 
-The SSH link always starts with `git@github.com:`.
+The SSH link always starts with `git@github.com`
 
-## Using the git repository
+## Setting up and working with your git repository
+
+Now that you have an account, fork this repository. Look at the top right of
+the GitHub page. Click the middle button called "Fork".
+
+This will make a personal copy of the repository. Click the green "Code"
+button, and copy the address under SSH. **You must have generated an SSH key
+and added it to GitHub before you can clone using the SSH link.**. If you
+have not yet done this, see [Setting up SSH Key](#setting-up-ssh-authentication-for-github).
+
+You can now clone your personal copy of this repository on the servers with
+`git clone` and the address you copied in the previous step. The command should
+look similar to:
+
+```
+git clone git@github.com:YOUR_USERNAME_GOES_HERE/OSU_ECEN5313_S2022_template.git
+```
 
 We recommend that, once you have cloned the repository and `cd` into it, you
 copy the template folder under your own group's name with a command like:
@@ -190,4 +196,5 @@ For help with **Xschem**, see [here](https://xschem.sourceforge.io/stefan/xschem
 
 If the manuals can't solve your problem or if you're having server related issues, contact me at
 ryan.ridley@okstate.edu. I'll hopefully be able to solve your problem or know someone who can.
+
 
