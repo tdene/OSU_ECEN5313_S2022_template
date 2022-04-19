@@ -37,7 +37,12 @@ on the design!
 As you modify files, add the changes with `git add`. Once you are ready to lock
 in a change (that is to say, you are ready to commit to it), lock it in with
 `git commit` and write a good description of your changes. To share your
-changes online, just `git push`. 
+changes online, just `git push`.
+
+If another contributor (your partner) makes changes online, you can bring them
+into your local copy with `git pull`. You should always `git pull` before doing
+`git commit`, just in case. If two people have modified the same file, it is
+easier to fix it before `commit` than after.
 
 You can find a handy cheatsheet of git commands
 [here](https://education.github.com/git-cheat-sheet-education.pdf).
