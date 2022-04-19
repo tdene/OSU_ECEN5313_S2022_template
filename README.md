@@ -92,8 +92,9 @@ If the .spice file is out of date with your schematic, you won't see the changes
 show up in simulation.
 
 ## Manuals and Help
-For help with Ngspice and writing simulations, see [here](http://ngspice.sourceforge.net/docs/ngspice-manual.pdf).
-For help with Xschem, see [here](https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html)
+For help with **Ngspice** and writing simulations, see [here](http://ngspice.sourceforge.net/docs/ngspice-manual.pdf).
+
+For help with **Xschem**, see [here](https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html)
 
 If the manuals can't solve your problem or if you're having server related issues, contact me at
 ryan.ridley@okstate.edu. I'll hopefully be able to solve your problem or know someone who can.
