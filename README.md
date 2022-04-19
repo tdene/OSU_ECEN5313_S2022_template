@@ -17,8 +17,11 @@ Then, to bring up the LDO example in xschem, run:
 xschem LDO.sch
 ```
 
-To run Ngspice simulations, remember to have 
+To run Ngspice simulations, remember to have the MODELS code block in
+your top level design.
+
 The schematic Analyses_Template.sch has examples of different analyses
 that you can run. *Remember* that ctrl C + ctrl V works between different
 Xschem windows, so you can copy and paste the whole code block between
 two different schematics. 
+
