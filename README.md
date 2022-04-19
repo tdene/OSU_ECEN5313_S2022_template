@@ -23,7 +23,7 @@ the GitHub page. Click the middle button called "Fork".
 This will make a personal copy of the repository. Click the green "Code"
 button, and copy the address under HTTPS. **You must have generated an SSH key
 and added it to GitHub before you can clone using the SSH link.**. If you 
-have not yet done this, see [Setting up SSH Key](setting-up-ssh-authentication-for-github).
+have not yet done this, see [Setting up SSH Key](#setting-up-ssh-authentication-for-github).
 After setting up an SSH key, You can now clone it on the servers with a command like:
 
 ```
