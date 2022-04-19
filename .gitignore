@@ -1,0 +1,4 @@
+*.out
+*.raw
+*sim*
+*.spice
