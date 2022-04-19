@@ -205,7 +205,7 @@ C {devices/lab_pin.sym} 600 90 0 0 {name=l16 sig_type=std_logic lab=Vfb}
 C {devices/vsource.sym} -280 10 0 0 {name=V2 value="5 AC 1"}
 C {devices/vdd.sym} -280 -30 0 0 {name=l17 lab=VDD}
 C {devices/gnd.sym} -280 50 0 0 {name=l18 lab=GND}
-C {devices/code_shown.sym} -370 -480 0 0 {name="AC Simulation"
+C {devices/code_shown.sym} 290 -450 0 0 {name="AC Simulation"
 only_toplevel=true
 value="
 .ac dec 20 1 1e6
@@ -216,7 +216,7 @@ run
 plot db(v(Vldo_out)) 180*cph(v(Vldo_out))/pi
 .endc
 "}
-C {devices/code.sym} -500 -340 0 0 {name=MODELS
+C {devices/code.sym} 120 -430 0 0 {name=MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="

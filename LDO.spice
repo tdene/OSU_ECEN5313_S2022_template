@@ -1,4 +1,4 @@
-** sch_path: /home/rjridle/LDO.sch
+** sch_path: /home/rjridle/OSU_ECEN5313_S2022_template/LDO.sch
 **.subckt LDO
 XM1 net1 net1 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
@@ -62,8 +62,8 @@ plot db(v(Vldo_out)) 180*cph(v(Vldo_out))/pi
 **.ends
 
 * expanding   symbol:  current_mirror.sym # of pins=1
-** sym_path: /home/rjridle/current_mirror.sym
-** sch_path: /home/rjridle/current_mirror.sch
+** sym_path: /home/rjridle/OSU_ECEN5313_S2022_template/current_mirror.sym
+** sch_path: /home/rjridle/OSU_ECEN5313_S2022_template/current_mirror.sch
 .subckt current_mirror  Vbias
 *.opin Vbias
 XM1 Vbias Vbias VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
