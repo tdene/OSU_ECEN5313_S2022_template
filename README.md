@@ -94,7 +94,6 @@ to run a git command. To set up:
 
    ```
    $ cat ~/.ssh/id_rsa.pub
-
    ```
 
    This will print out the contents of the file. It should start with `ssh-rsa`
