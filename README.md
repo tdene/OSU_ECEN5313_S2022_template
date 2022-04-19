@@ -62,7 +62,7 @@ link](https://docs.github.com/en/github-ae@latest/pull-requests/collaborating-wi
 Note that only the first three steps are necessary.
 
 ## Running Xschem
-The first step when brining up any new terminal is to run:
+The first step when opening up any new terminal is to run:
 
 ```
 fossi-tools
@@ -71,17 +71,29 @@ fossi-tools
 Make sure to run this command for ANY new terminal you open. 
 This will set up the paths to access all the relevant tools.
 
-Then, to bring up the LDO example in xschem, run:
+Then, to bring up the LDO example in xschem, make sure 
+the .sch file is in your current directory and run:
 
 ```
 xschem LDO.sch
 ```
 
-To run Ngspice simulations, remember to have the MODELS code block in
-your top level design.
-
 The schematic Analyses_Template.sch has examples of different analyses
-that you can run. *Remember* that ctrl C + ctrl V works between different
-Xschem windows, so you can copy and paste the whole code block between
+that you can run. **Remember** that `ctrl C` + `ctrl V` works between different
+Xschem windows, so you can copy and paste entire code blocks between
 two different schematics. 
+
+To run Ngspice simulations, remember to have the MODELS code block in
+your top level design. If any changes were made to the schematic since
+the last time you generated the netlist, make sure to hit the netlist button
+again before hitting the simulation button. Ngspice works of the .spice file
+found in you current working directory. If the .spice file is out of date with
+your schematic, you won't see the changes show up in simulation.
+
+## Manuals and Help
+For help with Ngspice and writing simulations, see [here](http://ngspice.sourceforge.net/docs/ngspice-manual.pdf).
+For help with Xschem, see [here](https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html)
+
+If the manuals can't solve your problem or if you're having server related issues, contact me at
+ryan.ridley@okstate.edu. I'll hopefully be able to solve your problem or know someone who can.
 
