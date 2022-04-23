@@ -22,7 +22,7 @@ value="
 C {devices/code_shown.sym} -80 220 0 0 {name="Parameter Sweep"
 only_toplevel=true
 value="
-.tran 1u 40u uic
+.tran 1u 200u uic
 .save all
 "}
 C {devices/vsource.sym} -260 -120 0 0 {name=V1 value=3.6}
