@@ -71,3 +71,15 @@ C {devices/lab_pin.sym} 350 -30 1 0 {name=l7 sig_type=std_logic lab=high2}
 C {devices/lab_pin.sym} 500 -30 1 0 {name=l8 sig_type=std_logic lab=high3}
 C {devices/lab_pin.sym} 790 10 2 0 {name=l9 sig_type=std_logic lab=high_fb}
 C {devices/lab_pin.sym} 790 80 2 0 {name=l10 sig_type=std_logic lab=low_fb}
+C {devices/gnd.sym} 200 -90 2 0 {name=l1 lab=GND}
+C {devices/gnd.sym} 180 170 0 0 {name=l11 lab=GND}
+C {devices/capa.sym} 180 140 0 0 {name=C1
+m=1
+value=10p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} 200 -60 2 1 {name=C2
+m=1
+value=10p
+footprint=1206
+device="ceramic capacitor"}
