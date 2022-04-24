@@ -48,17 +48,17 @@ N 510 170 830 170 {
 lab=lowside}
 N 510 110 510 170 {
 lab=lowside}
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/nand2_1.sym} 90 -30 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/nand2_1.sym} 90 110 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 260 -30 0 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 430 -30 0 0 {name=x4 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 580 -30 0 0 {name=x5 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 750 -30 0 0 {name=x6 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 260 110 0 0 {name=x7 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 430 110 0 0 {name=x8 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 580 110 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} 750 110 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/programs/xschem/share/xschem/xschem_library/devices/ipin.sym} -170 -50 0 0 {name=p1 lab=pwm}
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_stdcells/inv_1.sym} -70 10 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {import/angmar1/programs/xschem/share/xschem/xschem_library/devices/opin.sym} 830 -120 0 0 {name=p2 lab=highside}
-C {import/angmar1/programs/xschem/share/xschem/xschem_library/devices/opin.sym} 830 170 0 0 {name=p3 lab=lowside}
+C {sky130_stdcells/nand2_1.sym} 90 -30 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/nand2_1.sym} 90 110 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 260 -30 0 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 430 -30 0 0 {name=x4 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 580 -30 0 0 {name=x5 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 750 -30 0 0 {name=x6 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 260 110 0 0 {name=x7 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 430 110 0 0 {name=x8 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 580 110 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 750 110 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {devices/ipin.sym} -170 -50 0 0 {name=p1 lab=pwm}
+C {sky130_stdcells/inv_1.sym} -70 10 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {devices/opin.sym} 830 -120 0 0 {name=p2 lab=highside}
+C {devices/opin.sym} 830 170 0 0 {name=p3 lab=lowside}
