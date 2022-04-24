@@ -61,7 +61,7 @@ lab=GND}
 N -210 0 -200 0 {
 lab=nswitch}
 N -50 -0 -40 0 {
-lab=xxx}
+lab=nsw_driven}
 N -300 -90 -200 -90 {
 lab=pswitch}
 N -50 -90 -40 -90 {
@@ -85,7 +85,7 @@ lab=GND}
 N -60 -90 -50 -90 {
 lab=psw_driven}
 N -60 0 -50 0 {
-lab=xxx}
+lab=nsw_driven}
 C {devices/gnd.sym} 0 140 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDDH}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -20 -90 0 0 {name=M1
@@ -145,7 +145,7 @@ C {devices/ammeter.sym} 0 -180 0 0 {name=Vm1}
 C {devices/ammeter.sym} 0 80 0 0 {name=Vm2}
 C {drive_train.sym} -210 -90 0 0 {name=x1}
 C {drive_train.sym} -210 0 0 0 {name=x2}
-C {devices/vsource.sym} -540 0 0 0 {name=V2 value="PULSE(0 3.6 0 0.01u 0.01u 0.4u 1u)"}
+C {devices/vsource.sym} -540 0 0 0 {name=V2 value="PULSE(0 3.6 0 0.01u 0.01u 0.445u 1u)"}
 C {deadtime.sym} -470 -40 0 0 {name=x4}
 C {devices/lab_pin.sym} -520 -50 1 0 {name=l6 sig_type=std_logic lab=pwm}
 C {devices/lab_pin.sym} -50 -90 1 0 {name=l7 sig_type=std_logic lab=psw_driven}

@@ -7,7 +7,7 @@ E {}
 N 300 -30 390 -30 {
 lab=high2}
 N 620 -30 710 -30 {
-lab=highside}
+lab=lowside}
 N 470 -30 540 -30 {
 lab=high3}
 N 300 110 390 110 {
@@ -15,7 +15,7 @@ lab=low2}
 N 620 110 710 110 {
 lab=low4}
 N 470 110 540 110 {
-lab=lowside}
+lab=highside}
 N 150 -30 220 -30 {
 lab=high1}
 N 30 -10 30 30 {
@@ -37,13 +37,13 @@ lab=pwm}
 N -30 10 -30 130 {
 lab=pwm_n}
 N 660 -120 660 -30 {
-lab=highside}
+lab=lowside}
 N 660 -120 830 -120 {
-lab=highside}
+lab=lowside}
 N 510 170 830 170 {
-lab=lowside}
+lab=highside}
 N 510 110 510 170 {
-lab=lowside}
+lab=highside}
 N -30 130 30 130 {
 lab=pwm_n}
 N 150 110 220 110 {
@@ -60,8 +60,8 @@ C {inv.sym} 580 110 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky1
 C {inv.sym} 750 110 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} -170 -50 0 0 {name=p1 lab=pwm}
 C {inv.sym} -70 10 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {devices/opin.sym} 830 -120 0 0 {name=p2 lab=highside}
-C {devices/opin.sym} 830 170 0 0 {name=p3 lab=lowside}
+C {devices/opin.sym} 830 -120 0 0 {name=p2 lab=lowside}
+C {devices/opin.sym} 830 170 0 0 {name=p3 lab=highside}
 C {devices/lab_pin.sym} -30 130 0 0 {name=l2 sig_type=std_logic lab=pwm_n}
 C {devices/lab_pin.sym} 190 110 1 0 {name=l3 sig_type=std_logic lab=low1}
 C {devices/lab_pin.sym} 350 110 1 0 {name=l4 sig_type=std_logic lab=low2}
@@ -75,11 +75,11 @@ C {devices/gnd.sym} 200 -90 2 0 {name=l1 lab=GND}
 C {devices/gnd.sym} 180 170 0 0 {name=l11 lab=GND}
 C {devices/capa.sym} 180 140 0 0 {name=C1
 m=1
-value=10p
+value=2p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/capa.sym} 200 -60 2 1 {name=C2
 m=1
-value=10p
+value=2p
 footprint=1206
 device="ceramic capacitor"}

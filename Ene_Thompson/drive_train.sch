@@ -7,23 +7,23 @@ E {}
 N 40 -20 40 10 {
 lab=#net1}
 N 40 -50 60 -50 {
-lab=VDD}
+lab=VDDH}
 N 60 -80 60 -50 {
-lab=VDD}
+lab=VDDH}
 N 40 -80 60 -80 {
-lab=VDD}
+lab=VDDH}
 N 170 -50 190 -50 {
-lab=VDD}
+lab=VDDH}
 N 190 -80 190 -50 {
-lab=VDD}
+lab=VDDH}
 N 170 -80 190 -80 {
-lab=VDD}
+lab=VDDH}
 N 300 -50 320 -50 {
-lab=VDD}
+lab=VDDH}
 N 320 -80 320 -50 {
-lab=VDD}
+lab=VDDH}
 N 300 -80 320 -80 {
-lab=VDD}
+lab=VDDH}
 N 300 40 320 40 {
 lab=GND}
 N 320 40 320 70 {
@@ -63,15 +63,15 @@ lab=A}
 N -40 -0 -0 0 {
 lab=A}
 N 40 -120 40 -80 {
-lab=VDD}
+lab=VDDH}
 N 60 -80 320 -80 {
-lab=VDD}
+lab=VDDH}
 N 410 -50 430 -50 {
-lab=VDD}
+lab=VDDH}
 N 430 -80 430 -50 {
-lab=VDD}
+lab=VDDH}
 N 410 -80 430 -80 {
-lab=VDD}
+lab=VDDH}
 N 410 40 430 40 {
 lab=GND}
 N 430 40 430 70 {
@@ -83,7 +83,7 @@ lab=Y}
 N 370 -50 370 40 {
 lab=#net3}
 N 320 -80 410 -80 {
-lab=VDD}
+lab=VDDH}
 N 320 70 410 70 {
 lab=GND}
 N 300 0 370 0 {
@@ -174,7 +174,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/vdd.sym} 40 -120 0 0 {name=l2 lab=VDDH}
+C {devices/vdd.sym} 40 -120 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} 40 110 0 0 {name=l1 lab=GND}
 C {devices/opin.sym} 480 0 0 0 {name=p1 lab=Y}
 C {devices/ipin.sym} -30 0 0 0 {name=p2 lab=A}
