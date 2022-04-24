@@ -1,20 +1,24 @@
-v {xschem version=3.0.0 file_version=1.2}
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
 }
-T {@symname} -54 -6 0 0 0.3 0.3 {}
-T {@name} 135 -32 0 0 0.2 0.2 {}
-L 4 -130 -20 130 -20 {}
-L 4 -130 20 130 20 {}
-L 4 -130 -20 -130 20 {}
+V {}
+S {}
+E {}
+L 4 -10 -20 -10 20 {}
 L 4 130 -20 130 20 {}
-B 5 147.5 -12.5 152.5 -7.5 {name=highside dir=out }
 L 4 130 -10 150 -10 {}
-T {highside} 125 -14 0 1 0.2 0.2 {}
-B 5 -152.5 -12.5 -147.5 -7.5 {name=pwm dir=in }
-L 4 -150 -10 -130 -10 {}
-T {pwm} -125 -14 0 0 0.2 0.2 {}
-B 5 147.5 7.5 152.5 12.5 {name=lowside dir=out }
+L 4 -30 -10 -10 -10 {}
 L 4 130 10 150 10 {}
+L 4 -10 -20 130 -20 {}
+L 4 -10 20 130 20 {}
+B 5 147.5 -12.5 152.5 -7.5 {name=highside dir=out }
+B 5 -32.5 -12.5 -27.5 -7.5 {name=pwm dir=in }
+B 5 147.5 7.5 152.5 12.5 {name=lowside dir=out }
+T {@symname} 16 -6 0 0 0.3 0.3 {}
+T {@name} 135 -32 0 0 0.2 0.2 {}
+T {highside} 125 -14 0 1 0.2 0.2 {}
+T {pwm} -5 -14 0 0 0.2 0.2 {}
 T {lowside} 125 6 0 1 0.2 0.2 {}

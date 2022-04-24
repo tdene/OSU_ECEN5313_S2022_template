@@ -17,12 +17,11 @@ C {devices/code.sym} -100 60 0 0 {name=MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
-"}
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt"}
 C {devices/code_shown.sym} -80 220 0 0 {name="Parameter Sweep"
 only_toplevel=true
 value="
-.tran 1u 200u uic
+.tran 1u 200u
 .save all
 "}
 C {devices/vsource.sym} -260 -120 0 0 {name=V1 value=3.6}
@@ -34,3 +33,32 @@ device=resistor
 m=1}
 C {devices/lab_pin.sym} -80 -20 0 1 {name=p1 lab=Vout}
 C {devices/ipin.sym} 80 -20 0 0 {name=p2 lab=Vout}
+C {devices/vdd.sym} -150 -150 0 0 {name=l3 lab=VDD}
+C {devices/gnd.sym} -150 -90 0 0 {name=l5 lab=GND}
+C {devices/vsource.sym} -150 -120 0 0 {name=V2 value=3.6}
+C {devices/code.sym} -250 60 0 0 {name=GROSS_CELLS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+.subckt sky130_fd_sc_hd__nand2_1 A B VGND VNB VPB VPWR Y
+X0 Y A VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 w=1 l=0.5
+X1 VPWR B Y VPB sky130_fd_pr__pfet_g5v0d10v5 w=1 l=0.5
+X2 VGND B a_113_47# VNB sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+X3 a_113_47# A Y VNB sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+.ends
+
+.subckt sky130_fd_sc_hd__inv_1 A VGND VNB VPB VPWR Y
+X0 VGND A Y VNB sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+X1 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 w=1 l=0.5
+.ends
+
+VVPWR VDD VPWR 0
+VVPB VDD VPB 0
+VVGND GND VGND 0
+VVNB GND VGND 0
+
+.GLOBAL VPWR
+.GLOBAL VPB
+.GLOBAL VNB
+.GLOBAL VGND
+"}

@@ -17,9 +17,9 @@ lab=GND}
 N 10 0 10 30 {
 lab=GND}
 N 10 -120 10 -90 {
-lab=VDD}
+lab=VDDH}
 N -0 -90 10 -90 {
-lab=VDD}
+lab=VDDH}
 N 0 120 40 120 {
 lab=GND}
 N 100 120 150 120 {
@@ -34,27 +34,21 @@ N 70 -40 80 -40 {
 lab=#net3}
 N -70 120 0 120 {
 lab=GND}
-N -300 -30 -300 60 {
-lab=GND}
-N -300 120 -210 120 {
-lab=GND}
 N 150 -40 170 -40 {
 lab=Vout}
 N -0 -170 0 -160 {
 lab=#net1}
 N 0 -250 -0 -210 {
-lab=VDD}
+lab=VDDH}
 N 0 -250 -0 -230 {
-lab=VDD}
+lab=VDDH}
 N -0 -230 10 -230 {
-lab=VDD}
+lab=VDDH}
 N 10 -230 10 -120 {
-lab=VDD}
+lab=VDDH}
 N 150 50 150 110 {
 lab=#net2}
-N -210 60 -210 120 {
-lab=GND}
-N -300 60 -300 120 {
+N -540 60 -540 120 {
 lab=GND}
 N 10 30 10 130 {
 lab=GND}
@@ -72,6 +66,22 @@ N -300 -90 -200 -90 {
 lab=pswitch}
 N -50 -90 -40 -90 {
 lab=#net6}
+N -320 -90 -320 -50 {
+lab=pswitch}
+N -320 -90 -300 -90 {
+lab=pswitch}
+N -320 -30 -320 0 {
+lab=nswitch}
+N -320 0 -210 0 {
+lab=nswitch}
+N -540 -50 -540 -30 {
+lab=#net7}
+N -540 -50 -500 -50 {
+lab=#net7}
+N -540 30 -540 60 {
+lab=GND}
+N -540 120 -210 120 {
+lab=GND}
 C {devices/gnd.sym} 0 140 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDDH}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -20 -90 0 0 {name=M1
@@ -114,7 +124,6 @@ value=1u
 ic=1.8V
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -300 -60 0 1 {name=V1 value="PULSE(0 3.6 0 0.01u 0.01u 0.435u 1u)"}
 C {devices/lab_pin.sym} 0 -50 0 0 {name=l3 sig_type=std_logic lab=vl}
 C {devices/res.sym} 40 -40 3 0 {name=R1
 value=1.5m
@@ -126,10 +135,12 @@ value=10m
 footprint=1206
 device=resistor
 m=1}
-C {devices/vsource.sym} -210 30 0 1 {name=V2 value="PULSE(0 3.6 75n 0.01u 0.01u 0.285u 1u)"}
 C {devices/lab_pin.sym} -210 0 0 0 {name=l4 sig_type=std_logic lab=nswitch}
 C {devices/lab_pin.sym} -300 -90 0 0 {name=l5 sig_type=std_logic lab=pswitch}
 C {devices/ammeter.sym} 0 -180 0 0 {name=Vm1}
 C {devices/ammeter.sym} 0 80 0 0 {name=Vm2}
 C {drive_train.sym} -200 -90 0 0 {name=x1}
 C {drive_train.sym} -200 0 0 0 {name=x2}
+C {devices/vsource.sym} -540 0 0 0 {name=V2 value="PULSE(0 3.6 0 0.01u 0.01u 0.5u 1u)"}
+C {deadtime.sym} -470 -40 0 0 {name=x4}
+C {devices/lab_pin.sym} -520 -50 1 0 {name=l6 sig_type=std_logic lab=pwm}
