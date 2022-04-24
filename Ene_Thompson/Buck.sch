@@ -17,9 +17,9 @@ lab=GND}
 N 10 0 10 30 {
 lab=GND}
 N 10 -120 10 -90 {
-lab=VDDH}
+lab=VDD}
 N -0 -90 10 -90 {
-lab=VDDH}
+lab=VDD}
 N 0 120 40 120 {
 lab=GND}
 N 100 120 150 120 {
@@ -39,13 +39,13 @@ lab=Vout}
 N -0 -170 0 -160 {
 lab=#net1}
 N 0 -250 -0 -210 {
-lab=VDDH}
+lab=VDD}
 N 0 -250 -0 -230 {
-lab=VDDH}
+lab=VDD}
 N -0 -230 10 -230 {
-lab=VDDH}
+lab=VDD}
 N 10 -230 10 -120 {
-lab=VDDH}
+lab=VDD}
 N 150 50 150 110 {
 lab=#net2}
 N -540 60 -540 120 {
@@ -87,12 +87,12 @@ lab=psw_driven}
 N -60 0 -50 0 {
 lab=nsw_driven}
 C {devices/gnd.sym} 0 140 0 0 {name=l1 lab=GND}
-C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDDH}
+C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDD}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -20 -90 0 0 {name=M1
 L=0.5
 W=20
 nf=1
-mult=1025
+mult=1581
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -107,7 +107,7 @@ C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 0 0 0 {name=x3
 L=0.5
 W=20
 nf=1
-mult=975
+mult=419
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
