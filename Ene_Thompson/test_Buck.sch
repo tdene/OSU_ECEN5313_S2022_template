@@ -21,20 +21,20 @@ value="
 C {devices/code_shown.sym} -80 220 0 0 {name="Parameter Sweep"
 only_toplevel=true
 value="
-.tran 1n 200u
+.tran 1u 200u
 .save all
 
  .control
         run
-        write test_Buck.raw
-        meas tran idd_ave INTEG i(v2) from=190us to=191us
-        meas tran idh_ave INTEG i(v1) from=190us to=191us
-        meas tran ido_ave INTEG i(vouti) from=190us to=191us
-        let power = (idd_ave-idh_ave)*3.6
-        print idd_ave
-        print idh_ave
-        print ido_ave
-        print power
+        meas tran idd_ave INTEG i(v2) from=190u to=191u
+        meas tran idh_ave INTEG i(v1) from=190u to=191u
+        meas tran ido_ave INTEG i(vouti) from=190u to=191u
+        let power_in = (idd_ave-idh_ave)*3.6
+        let power_out = (ido_ave)*1.8
+        let nu = power_out/power_in*100
+        print power_in
+        print power_out
+        print nu
  .endc
 "}
 C {devices/vsource.sym} -260 -120 0 0 {name=V1 value=3.6}
