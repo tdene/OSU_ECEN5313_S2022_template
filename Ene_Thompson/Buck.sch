@@ -10,8 +10,6 @@ N 0 -160 0 -120 {
 lab=#net1}
 N 150 110 150 120 {
 lab=#net2}
-N -160 -90 -40 -90 {
-lab=pswitch}
 N 0 -60 0 -30 {
 lab=vl}
 N -0 0 10 0 {
@@ -36,12 +34,10 @@ N 70 -40 80 -40 {
 lab=#net3}
 N -70 120 0 120 {
 lab=GND}
-N -160 -30 -160 60 {
+N -300 -30 -300 60 {
 lab=GND}
-N -160 120 -70 120 {
+N -300 120 -210 120 {
 lab=GND}
-N -70 0 -40 0 {
-lab=nswitch}
 N 150 -40 170 -40 {
 lab=Vout}
 N -0 -170 0 -160 {
@@ -56,9 +52,9 @@ N 10 -230 10 -120 {
 lab=VDD}
 N 150 50 150 110 {
 lab=#net2}
-N -70 60 -70 120 {
+N -210 60 -210 120 {
 lab=GND}
-N -160 60 -160 120 {
+N -300 60 -300 120 {
 lab=GND}
 N 10 30 10 130 {
 lab=GND}
@@ -66,13 +62,23 @@ N 0 130 10 130 {
 lab=GND}
 N 0 30 0 50 {
 lab=#net4}
+N -210 120 -70 120 {
+lab=GND}
+N -210 0 -200 0 {
+lab=nswitch}
+N -50 -0 -40 0 {
+lab=#net5}
+N -300 -90 -200 -90 {
+lab=pswitch}
+N -50 -90 -40 -90 {
+lab=#net6}
 C {devices/gnd.sym} 0 140 0 0 {name=l1 lab=GND}
 C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDD}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -20 -90 0 0 {name=M1
 L=0.5
 W=20
 nf=1
-mult=1333
+mult=1025
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -83,11 +89,11 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/opin.sym} 170 -40 0 0 {name=p1 lab=Vout}
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 0 0 0 {name=M2
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} -20 0 0 0 {name=x3
 L=0.5
 W=20
 nf=1
-mult=667
+mult=975
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -108,7 +114,7 @@ value=1u
 ic=1.8V
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -160 -60 0 1 {name=V1 value="PULSE(0 5 0 0.01u 0.01u 0.5u 1u)"}
+C {devices/vsource.sym} -300 -60 0 1 {name=V1 value="PULSE(0 3.6 0 0.01u 0.01u 0.435u 1u)"}
 C {devices/lab_pin.sym} 0 -50 0 0 {name=l3 sig_type=std_logic lab=vl}
 C {devices/res.sym} 40 -40 3 0 {name=R1
 value=1.5m
@@ -120,8 +126,10 @@ value=10m
 footprint=1206
 device=resistor
 m=1}
-C {devices/vsource.sym} -70 30 0 1 {name=V2 value="PULSE(0 5 75n 0.01u 0.01u 0.35u 1u)"}
-C {devices/lab_pin.sym} -70 0 0 0 {name=l4 sig_type=std_logic lab=nswitch}
-C {devices/lab_pin.sym} -160 -90 0 0 {name=l5 sig_type=std_logic lab=pswitch}
+C {devices/vsource.sym} -210 30 0 1 {name=V2 value="PULSE(0 3.6 75n 0.01u 0.01u 0.285u 1u)"}
+C {devices/lab_pin.sym} -210 0 0 0 {name=l4 sig_type=std_logic lab=nswitch}
+C {devices/lab_pin.sym} -300 -90 0 0 {name=l5 sig_type=std_logic lab=pswitch}
 C {devices/ammeter.sym} 0 -180 0 0 {name=Vm1}
 C {devices/ammeter.sym} 0 80 0 0 {name=Vm2}
+C {drive_train.sym} -200 -90 0 0 {name=x1}
+C {drive_train.sym} -200 0 0 0 {name=x2}
