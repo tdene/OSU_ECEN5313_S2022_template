@@ -40,7 +40,7 @@ N 0 -40 -0 170 {
 lab=A}
 N 0 170 40 170 {
 lab=A}
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_g5v0d10v5.sym} 90 170 0 0 {name=M1
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 90 170 0 0 {name=M1
 L=0.5
 W=1
 nf=1
@@ -54,7 +54,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {import/angmar1/repos/openpdk/share/pdk/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_g5v0d10v5.sym} 40 -40 0 0 {name=M2
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 40 -40 0 0 {name=M2
 L=0.5
 W=1
 nf=1
@@ -69,6 +69,6 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/vdd.sym} 110 -90 0 0 {name=l1 lab=VDDH}
-C {import/angmar1/programs/xschem/share/xschem/xschem_library/devices/gnd.sym} 110 220 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} 110 220 0 0 {name=l2 lab=GND}
 C {devices/ipin.sym} -10 -40 0 0 {name=p1 lab=A}
-C {import/angmar1/programs/xschem/share/xschem/xschem_library/devices/opin.sym} 230 20 0 0 {name=p5 lab=Y}
+C {devices/opin.sym} 230 20 0 0 {name=p5 lab=Y}

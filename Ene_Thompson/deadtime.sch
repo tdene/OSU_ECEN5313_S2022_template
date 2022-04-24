@@ -48,18 +48,18 @@ N -30 130 30 130 {
 lab=pwm_n}
 N 150 110 220 110 {
 lab=low1}
-C {sky130_stdcells/nand2_1.sym} 90 -30 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/nand2_1.sym} 90 110 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 260 -30 0 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 430 -30 0 0 {name=x4 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 580 -30 0 0 {name=x5 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 750 -30 0 0 {name=x6 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 260 110 0 0 {name=x7 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 430 110 0 0 {name=x8 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 580 110 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 750 110 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {nand2.sym} 90 -30 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {nand2.sym} 90 110 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 260 -30 0 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 430 -30 0 0 {name=x4 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 580 -30 0 0 {name=x5 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 750 -30 0 0 {name=x6 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 260 110 0 0 {name=x7 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 430 110 0 0 {name=x8 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 580 110 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} 750 110 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} -170 -50 0 0 {name=p1 lab=pwm}
-C {sky130_stdcells/inv_1.sym} -70 10 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {inv.sym} -70 10 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/opin.sym} 830 -120 0 0 {name=p2 lab=highside}
 C {devices/opin.sym} 830 170 0 0 {name=p3 lab=lowside}
 C {devices/lab_pin.sym} -30 130 0 0 {name=l2 sig_type=std_logic lab=pwm_n}
@@ -71,12 +71,3 @@ C {devices/lab_pin.sym} 350 -30 1 0 {name=l7 sig_type=std_logic lab=high2}
 C {devices/lab_pin.sym} 500 -30 1 0 {name=l8 sig_type=std_logic lab=high3}
 C {devices/lab_pin.sym} 790 10 2 0 {name=l9 sig_type=std_logic lab=high_fb}
 C {devices/lab_pin.sym} 790 80 2 0 {name=l10 sig_type=std_logic lab=low_fb}
-C {devices/code.sym} -170 -220 0 0 {name=GROSS_CELLS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-VVPWR VPWR GND 3.6
-VVPB VPB GND 3.6
-VVGND VGND GND 0
-VVNB VNB GND 0
-"}
