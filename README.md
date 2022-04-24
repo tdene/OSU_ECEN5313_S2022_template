@@ -11,7 +11,7 @@ make sure to keep an eye out for these.
    button and retry.
  * FET sizes have to be specific numbers (see below)
 
-First, and most importantly, the nfet\_g5v0d10v5 and pfet\_g5v0d10v5 5V FET
+First, and most importantly, the `nfet_g5v0d10v5` and `pfet_g5v0d10v5` 5V FET
 devices that should be used for this project only have a limited discrete list
 of allowed dimensions.
 
