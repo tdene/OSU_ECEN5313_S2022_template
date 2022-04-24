@@ -11,7 +11,7 @@ lab=Vout}
 N 90 -20 90 20 {
 lab=Vout}
 C {Buck.sym} -230 -20 0 0 {name=x1}
-C {devices/vdd.sym} -260 -150 0 0 {name=l1 lab=VDD}
+C {devices/vdd.sym} -260 -150 0 0 {name=l1 lab=VDDH}
 C {devices/gnd.sym} -260 -90 0 0 {name=l2 lab=GND}
 C {devices/code.sym} -100 60 0 0 {name=MODELS
 only_toplevel=true

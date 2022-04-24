@@ -73,7 +73,7 @@ lab=pswitch}
 N -50 -90 -40 -90 {
 lab=#net6}
 C {devices/gnd.sym} 0 140 0 0 {name=l1 lab=GND}
-C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDD}
+C {devices/vdd.sym} 0 -250 0 0 {name=l2 lab=VDDH}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -20 -90 0 0 {name=M1
 L=0.5
 W=20

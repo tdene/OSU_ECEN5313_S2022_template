@@ -174,7 +174,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/vdd.sym} 40 -120 0 0 {name=l2 lab=VDD}
+C {devices/vdd.sym} 40 -120 0 0 {name=l2 lab=VDDH}
 C {devices/gnd.sym} 40 110 0 0 {name=l1 lab=GND}
 C {devices/opin.sym} 480 0 0 0 {name=p1 lab=Y}
 C {devices/ipin.sym} -30 0 0 0 {name=p2 lab=A}
