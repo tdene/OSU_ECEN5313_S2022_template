@@ -1,5 +1,36 @@
 # Template folder for OSU ECEN5313 Spring 2022 final project
 
+## COMMON ISSUES
+
+This is just a list of common issues that we have run into while doing our
+project. After you have read the rest of this guide and have started working,
+make sure to keep an eye out for these.
+
+ * The server `angmar` may not run SPICE in some cases. Try a different one.
+ * If the "open" menu gives a "file not found" error, press the "Current dir"
+   button and retry.
+ * FET sizes have to be specific numbers (see below)
+
+First, and most importantly, the nfet\_g5v0d10v5 and pfet\_g5v0d10v5 5V FET
+devices that should be used for this project only have a limited discrete list
+of allowed dimensions.
+
+In order to make large devices, use the `mult` integer attribute on the FETs.
+This acts as a multiplier to the total width.
+
+Note that the following dimensions are in um. xschem already assumes you mean
+um, so you do not have to specify. For example, the default size on these
+devices is 1 / 1, meaning 1um by 1um. 
+
+The following combinations of lengths and widths are allowed: any length in the list
+`0.5, 1, 2, 4, 8`, combined with any width in the list `1, 3, 5, 7`.
+
+In addition, the following specific W / L combinations are allowed:
+`0.5 / 10, 0.5 / 15, 1 / 15, 0.5 / 20, 1 / 20`.
+
+Given that this project requires large FETs, our recommendation is that you use the
+`0.5 / 20` or `1 / 20` devices and not worry beyond that.
+
 ## Making a GitHub account
 
 First, make a github account if you do not already have one by navigating to
