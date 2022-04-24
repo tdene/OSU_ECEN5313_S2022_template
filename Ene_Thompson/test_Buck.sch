@@ -51,14 +51,4 @@ X3 a_113_47# A Y VNB sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
 X0 VGND A Y VNB sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
 X1 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 w=1 l=0.5
 .ends
-
-VVPWR VDD VPWR 0
-VVPB VDD VPB 0
-VVGND GND VGND 0
-VVNB GND VGND 0
-
-.GLOBAL VPWR
-.GLOBAL VPB
-.GLOBAL VNB
-.GLOBAL VGND
 "}

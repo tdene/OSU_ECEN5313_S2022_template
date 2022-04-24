@@ -71,3 +71,12 @@ C {devices/lab_pin.sym} 350 -30 1 0 {name=l7 sig_type=std_logic lab=high2}
 C {devices/lab_pin.sym} 500 -30 1 0 {name=l8 sig_type=std_logic lab=high3}
 C {devices/lab_pin.sym} 790 10 2 0 {name=l9 sig_type=std_logic lab=high_fb}
 C {devices/lab_pin.sym} 790 80 2 0 {name=l10 sig_type=std_logic lab=low_fb}
+C {devices/code.sym} -170 -220 0 0 {name=GROSS_CELLS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+VVPWR VPWR GND 3.6
+VVPB VPB GND 3.6
+VVGND VGND GND 0
+VVNB VNB GND 0
+"}
