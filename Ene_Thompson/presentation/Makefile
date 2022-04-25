@@ -15,3 +15,4 @@ figs: vin-data.txt
 
 clean:
 	rm -rf pres.pdf *.out *.toc *.aux *.nav *.snm *.log
+	rm *.ps vin-eff.pdf vin-ripple.pdf
