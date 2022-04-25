@@ -45,14 +45,29 @@
 
 \begin{frame}
   \frametitle{Topology and Design Goals}
+  \begin{itemize}
+  \item High efficiency voltage conversion from $3.6V$ to $1.8V$.
+  \item Supply at least $400mA$.
+  \item Ripple $< 40mV$
+  \item Work with reasonably wide input supply $3.0$ to $4.4V$.
+  \end{itemize}        
 \end{frame}
 
 \begin{frame}
-  \frametitle{Passive Components}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Frequency}
+  \frametitle{Passive Components and Design Selection}
+  \begin{itemize}
+  \item Inductor
+    \begin{itemize}
+    \item Inductance
+    \item ESR
+    \end{itemize}
+  \item Capacitor
+    \begin{itemize}
+    \item Capacitance
+    \item ESR $@ 1MHz$ $10 m\Omega$
+    \end{itemize}
+  \item Switching frequency $1Mhz$ (Found experimentally)
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -68,15 +83,27 @@
 \begin{frame}
   \frametitle{Deadtime}
   \includegraphics[scale=0.085]{deadtime.png}
+  \begin{itemize}
+  \item 4 chain inverter adds delay.
+  \item NAND creates deadtime.
+  \item 2pF cap increases propagation delay
+  \item Deadtime = ~20ps or 2\%  of period
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Deadtime Inverter}
   \includegraphics[scale=0.09]{inverter.png}
+  \begin{itemize}
+  \item Min sized 5V tolerant
+  \end{itemize}
 \end{frame}
 \begin{frame}
-  \frametitle{Deadtime Nand}
+  \frametitle{Deadtime NAND}
   \includegraphics[scale=0.09]{nand.png}
+  \begin{itemize}
+  \item Min sized 5V tolerant
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -85,13 +112,39 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Efficiency}
+  \frametitle{Vout at Startup }
+  \includegraphics[scale=0.25]{startup-to-steady.png}
 \end{frame}
 
 \begin{frame}
   \frametitle{Ripple}
+  \includegraphics[scale=0.25]{ripple.png}
 \end{frame}
 
+\begin{frame}
+  \frametitle{PWM input and Deadtime output at $Vin = 3.6V$}
+  \includegraphics[scale=0.25]{pwm-deadtime.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deadtime Measurement at $Vin = 3.6V$}
+  \includegraphics[scale=0.25]{pwm-deadtime-rise.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Drive Train Output $Vin = 3.6V$}
+  \includegraphics[scale=0.25]{drive-train-output.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Power FET Currents}
+  \includegraphics[scale=0.25]{hiside-lowside-current.png}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Efficiency}
+\end{frame}
 
 
 \end{document}
