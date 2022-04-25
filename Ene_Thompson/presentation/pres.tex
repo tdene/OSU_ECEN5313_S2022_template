@@ -58,7 +58,7 @@
   \begin{itemize}
   \item Inductor
     \begin{itemize}
-    \item InductanceL $4.7 \mu H$
+    \item Inductance $4.7 \mu H$
     \item ESR $1.5 m\Omega$
     \end{itemize}
   \item Capacitor
@@ -77,7 +77,8 @@
   \includegraphics[scale=0.08]{buck.png}
   \begin{itemize}
   \item PMOS $W/L = 20 * 1581 / 0.5 \mu M$
-  \item NMOS $W/L = 20 * 419 / 0.5 \mu M$    
+  \item NMOS $W/L = 20 * 419 / 0.5 \mu M$   
+  \item Total area $= 20 * (1581 + 419) * 0.5 = 20,000 \mu M^2$
   \end{itemize}
 \end{frame}
 
@@ -88,7 +89,7 @@
   \item Measured Ron for an arbitrary sized PMOS and NMOS.
   \item Found the relative carrier mobility = $3.14$
   \item Including deadtime PMOS Duty Cyle $54.1\%$, NMOS $45.0\%$
-  \item $54.1/45.0 = 1.202$.  Ronp should be 1.202 times smaller than Ronn.
+  \item $54.1/45.0 = 1.202$.  $R_{onp}$ should be $1.202$ times smaller than $R_{onn}$.
   \item $W_p = 3.14 * 1.202 * W_n$
   \item PMOS $W/L = 20 * 1581 / 0.5 \mu M$
   \item NMOS $W/L = 20 * 419 / 0.5 \mu M$    
@@ -101,6 +102,7 @@
   \begin{itemize}
   \item Sizes scaled in geometric series, 7, 50, 350, 2500
   \item Assumes input is 1x and output is ~20000.
+  \item Total area $= (7 + 50 + 350 + 2500) * 0.5 = 1453.5 \mu M^2$
   \end{itemize}
 \end{frame}
 
