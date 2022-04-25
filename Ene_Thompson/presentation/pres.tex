@@ -200,6 +200,21 @@ simulation results} &\\
 
 \begin{frame}
   \frametitle{Efficiency vs Vin (tt) }
+    \begin{tabular}{| c | c | c | c | c | c | c | c |}
+        \hline
+            Vin (V)  &  duty cycle &  iout (mA) &   ripple (mV) & efficiency\\\hline
+            3.00 &   67.5\% &      400 &    19.7 &       93.72\%\\\hline
+            3.15 &   64.5\% &      400 &    21.0 &       93.91\%\\\hline
+            3.30 &   61.4\% &      400 &    22.0 &       93.99\%\\\hline
+            3.45 &   58.7\% &      400 &    23.0 &       94.10\%\\\hline
+            3.60 &   56.5\% &      400 &    23.8 &       94.23\%\\\hline
+            3.75 &   54.4\% &      400 &    25.0 &       94.28\%\\\hline
+            3.90 &   52.3\% &      400 &    25.6 &       94.36\%\\\hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Efficiency vs Vin (tt) }
   \includegraphics[scale=0.6]{vin-eff.pdf}
 \end{frame}
 
@@ -215,11 +230,26 @@ simulation results} &\\
 \end{frame}
 
 \begin{frame}
+  \frametitle{Efficiency vs Iout}
+    \begin{tabular}{| c | c | c | c | c | c | c | c |}
+        \hline
+            Vin (V) &    duty cycle &   iout (mA) &   ripple (mV) & efficiency\\\hline
+            3.60 &   42.2\% &800 &    24.0 &      90.30\%\\\hline
+            3.60 &   43.6\% &530 &    23.8 &      92.91\%\\\hline
+            3.60 &   44.5\% &400 &    23.8 &      94.23\%\\\hline
+            3.60 &   45.0\% &300 &    23.8 &      95.15\%\\\hline
+            3.60 &   45.6\% &200 &    24.0 &      96.00\%\\\hline
+            3.60 &   46.4\% &100 &    23.8 &      96.01\%\\\hline
+            3.60 &   49.0\% &10  &    23.6 &      80.28\%\\\hline
+            3.60 &   48.7\% &1   &    25.4 &      27.90\%\\\hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}
   \frametitle{Ripple vs Iout}
   \includegraphics[scale=0.6]{io-ripple.pdf}
   $max: 25.4 mV$ at $Iout = 0.01 \omega$
 \end{frame}
-
 
 
 \end{document}
