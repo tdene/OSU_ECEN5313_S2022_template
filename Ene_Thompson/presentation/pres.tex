@@ -141,7 +141,7 @@
 
 \begin{frame}
   \frametitle{Ripple}
-  \includegraphics[scale=0.25]{ripple.png}
+  \includegraphics[scale=0.23]{ripple.png}
   \begin{itemize}
   \item $1.797 V$ DC output
   \item $24 mV$ ripple
@@ -174,24 +174,28 @@
 \begin{frame}
   \frametitle{Compliance Matrix}
   \begin{center}
-    \begin{tabular}{| c | c | c | c | c  |}
-      \hline      
-      Parameters & Min & Typical & Max & Unit \\
-      \hline
-      Input Voltage & 3.0 & 3.6 & 4.4 & V \\
-      Output Voltage & & 1.8 &  & V \\
-      Output Voltage Accuracy & -3\% & & +3\% & V \\
-      Steady state voltage ripple &  & & 40mV & V \\
-      Inductor & & 4.7 & & $\mu H$ \\
-    \end{tabular}
+    {\scriptsize
+      \begin{tabular}{| c | c | c | c | c  | c | c | c |}
+        \hline      
+         & \multicolumn{2}{l}{Specifications} & & \multicolumn{3}{l}{PVT
+simulation results} &\\
+        \hline
+        Parameters & Min & Typ & Max & Min & Typ & Max & Unit \\
+        \hline
+        Input Voltage & 3.0 & 3.6 & 4.4 & & & & V \\
+        Output Voltage & & 1.8 &  & & 1.797 & & V \\
+        Output Voltage Accuracy & -3 & & +3 & & 0.2 & & \% \\
+        Steady state voltage ripple &  & & 40mV & & 24mV & & V \\
+        Inductor & & 4.7 & & & & 4.7 & $\mu H$ \\
+        Capacitor & 1 &  & 10 & & 1 & & $\mu F$ \\
+        Power FET area & & & 20,000 & & 20,000 & & $\mu M^2$ \\
+        Efficiency at Iout = 400mA & & & & & & & \% \\
+        Peak Efficiency & & & &  & & & \% \\      
+        \hline
+      \end{tabular}
+    }
   \end{center}
 
-\end{frame}
-
-
-
-\begin{frame}
-  \frametitle{Efficiency}
 \end{frame}
 
 
