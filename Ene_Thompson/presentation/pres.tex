@@ -58,26 +58,50 @@
   \begin{itemize}
   \item Inductor
     \begin{itemize}
-    \item Inductance
-    \item ESR
+    \item InductanceL $4.7 \mu H$
+    \item ESR $1.5 m\Omega$
     \end{itemize}
   \item Capacitor
     \begin{itemize}
-    \item Capacitance
+    \item Capacitance $1\mu H$
     \item ESR $@ 1MHz$ $10 m\Omega$
     \end{itemize}
   \item Switching frequency $1Mhz$ (Found experimentally)
+  \item Duty Cyle 55.5\% (Found experimentally)
+  \item Nominal Output Voltage 1.8V 
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Buck}
   \includegraphics[scale=0.08]{buck.png}
+  \begin{itemize}
+  \item PMOS $W/L = 20 * 1581 / 0.5 \mu M$
+  \item NMOS $W/L = 20 * 419 / 0.5 \mu M$    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Power FET W/L}
+  \begin{itemize}
+  \item Duty Cycle of $55.5\%$ biases toward more on time for the high side.
+  \item Measured Ron for an arbitrary sized PMOS and NMOS.
+  \item Found the relative carrier mobility = $3.14$
+  \item Including deadtime PMOS Duty Cyle $54.1\%$, NMOS $45.0\%$
+  \item $54.1/45.0 = 1.202$.  Ronp should be 1.202 times smaller than Ronn.
+  \item $W_p = 3.14 * 1.202 * W_n$
+  \item PMOS $W/L = 20 * 1581 / 0.5 \mu M$
+  \item NMOS $W/L = 20 * 419 / 0.5 \mu M$    
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Drive Train}
   \includegraphics[scale=0.08]{drive-train.png}
+  \begin{itemize}
+  \item Sizes scaled in geometric series, 7, 50, 350, 2500
+  \item Assumes input is 1x and output is ~20000.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -87,20 +111,17 @@
   \item 4 chain inverter adds delay.
   \item NAND creates deadtime.
   \item 2pF cap increases propagation delay
-  \item Deadtime = ~20ps or 2\%  of period
+  \item Deadtime = 15ps or 1.5\%  of period
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Deadtime Inverter}
-  \includegraphics[scale=0.09]{inverter.png}
-  \begin{itemize}
-  \item Min sized 5V tolerant
-  \end{itemize}
-\end{frame}
-\begin{frame}
-  \frametitle{Deadtime NAND}
-  \includegraphics[scale=0.09]{nand.png}
+  \frametitle{Deadtime Inverter and NAND}
+  \begin{multicols}{2}
+    \includegraphics[scale=0.09]{inverter.png}
+    \columnbreak
+    \includegraphics[scale=0.107]{nand.png}
+  \end{multicols}
   \begin{itemize}
   \item Min sized 5V tolerant
   \end{itemize}
@@ -119,11 +140,18 @@
 \begin{frame}
   \frametitle{Ripple}
   \includegraphics[scale=0.25]{ripple.png}
+  \begin{itemize}
+  \item $1.797 V$ DC output
+  \item $24 mV$ ripple
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{PWM input and Deadtime output at $Vin = 3.6V$}
   \includegraphics[scale=0.25]{pwm-deadtime.png}
+  \begin{itemize}
+  \item 15ns deadtime 
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -140,6 +168,24 @@
   \frametitle{Power FET Currents}
   \includegraphics[scale=0.25]{hiside-lowside-current.png}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Compliance Matrix}
+  \begin{center}
+    \begin{tabular}{| c | c | c | c | c  |}
+      \hline      
+      Parameters & Min & Typical & Max & Unit \\
+      \hline
+      Input Voltage & 3.0 & 3.6 & 4.4 & V \\
+      Output Voltage & & 1.8 &  & V \\
+      Output Voltage Accuracy & -3\% & & +3\% & V \\
+      Steady state voltage ripple &  & & 40mV & V \\
+      Inductor & & 4.7 & & $\mu H$ \\
+    \end{tabular}
+  \end{center}
+
+\end{frame}
+
 
 
 \begin{frame}
