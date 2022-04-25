@@ -145,7 +145,7 @@ C {devices/ammeter.sym} 0 -180 0 0 {name=Vm1}
 C {devices/ammeter.sym} 0 80 0 0 {name=Vm2}
 C {drive_train.sym} -210 -90 0 0 {name=x1}
 C {drive_train.sym} -210 0 0 0 {name=x2}
-C {devices/vsource.sym} -540 0 0 0 {name=V2 value="PULSE(0 3.6 0 0.01u 0.01u 0.445u 1u)"}
+C {devices/vsource.sym} -540 0 0 0 {name=V2 value="PULSE(0 3.6 0 0.01u 0.01u 0.422u 1u)"}
 C {deadtime.sym} -470 -40 0 0 {name=x4}
 C {devices/lab_pin.sym} -520 -50 1 0 {name=l6 sig_type=std_logic lab=pwm}
 C {devices/lab_pin.sym} -50 -90 1 0 {name=l7 sig_type=std_logic lab=psw_driven}
