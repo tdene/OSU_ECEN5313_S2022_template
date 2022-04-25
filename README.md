@@ -220,6 +220,32 @@ with the same name as your schematic, found in you current working directory.
 If the .spice file is out of date with your schematic, you won't see the changes
 show up in simulation.
 
+## Sample automatic power calculation
+
+This sample transient analysis script will also calculate the power efficiency
+of the circuit, and print it into the .out file. You can find it in the .out
+file by searching for `power_out`.
+
+Note that you will have to adjust the net names (v1 and vouti), voltage values
+(1.8 and 3.6), and time period in this script for your own usecase.
+
+```
+.tran 1u 200u
+.save all
+
+ .control
+        run
+        meas tran idd_ave INTEG i(v1) from=190u to=191u
+        meas tran ido_ave INTEG i(vouti) from=190u to=191u
+        let power_in = (idd_ave)*3.6
+        let power_out = (ido_ave)*1.8
+        let nu = power_out/power_in*100
+        print power_in
+        print power_out
+        print nu
+ .endc
+```
+
 ## Manuals and Help
 For help with **Ngspice** and writing simulations, see [here](http://ngspice.sourceforge.net/docs/ngspice-manual.pdf).
 

@@ -49,6 +49,9 @@ in ASCII format. This can later be
 exported into another program if needed.} 1070 -110 0 0 0.2 0.2 {layer=4}
 T {Always Include in Schematics!!} 50 -580 0 0 0.6 0.6 {layer=8}
 T {Include in Schematic if you want} 40 -230 0 0 0.6 0.6 {layer=8}
+T {This calculation measures power in, 
+power out, efficiency, and voltage
+ripple.} 1470 -80 0 0 0.2 0.2 {layer=4}
 C {devices/code_shown.sym} 570 -400 0 0 {name="DC Parameter Sweep"
 only_toplevel=true
 place=end
@@ -117,4 +120,34 @@ run
 plot db(v(Vout)) 180*cph(v(Vout))/pi
 write myschematic.raw all
 .endc
+"}
+C {devices/code_shown.sym} 1440 -540 0 0 {name="Efficiency, Total Power, and Power Ripple Calculation"
+only_toplevel=true
+place=end
+value="
+.tran 1u 200u
+.save all
+
+.control
+        run
+        meas tran idd_ave INTEG i(v2) from=190u to=191u
+        meas tran idh_ave INTEG i(v1) from=190u to=191u
+        meas tran ido_ave INTEG i(vouti) from=190u to=191u
+        meas tran vout_ave INTEG v(vout) from=190u to=191u
+        meas tran vout_max MAX   v(vout) from=190u to=191u
+        meas tran vdd_ave INTEG v(vdd)   from=190u to=191u
+        let idd_ave = idd_ave*1Meg
+        let idh_ave = idh_ave*1Meg
+        let ido_ave = ido_ave*1Meg
+        let vdd_ave = vdd_ave*1Meg
+        let vout_ave = vout_ave*1Meg
+        let power_in = (idd_ave-idh_ave)*vdd_ave
+        let power_out = (ido_ave)*vout_ave
+        let nu = power_out/power_in*100
+        print power_in
+        print power_out
+        print nu
+        print vout_ave
+        print vout_max-vout_ave 
+ .endc
 "}
