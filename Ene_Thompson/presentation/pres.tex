@@ -177,12 +177,11 @@
     {\scriptsize
       \begin{tabular}{| c | c | c | c | c  | c | c | c |}
         \hline      
-         & \multicolumn{2}{l}{Specifications} & & \multicolumn{3}{l}{PVT
-simulation results} &\\
+         & \multicolumn{2}{l}{Specifications} & & \multicolumn{3}{l}{simulation results} &\\
         \hline
         Parameters & Min & Typ & Max & Min & Typ & Max & Unit \\
         \hline
-        Input Voltage & 3.0 & 3.6 & 4.4 & & & & V \\
+        Input Voltage & 3.0 & 3.6 & 4.4 & 3.0 & 3.6 & 4.4 & V \\
         Output Voltage & & 1.8 &  & & 1.797 & & V \\
         Output Voltage Accuracy & -3 & & +3 & & 0.2 & & \% \\
         Steady state ripple p2p &  & & 40mV & & 24mV & & V \\
@@ -226,7 +225,7 @@ simulation results} &\\
 \begin{frame}
   \frametitle{Peak Efficiency vs Iout}
   \includegraphics[scale=0.6]{io-eff.pdf}
-  $max: 96.01\%$ at $Iout = 0.1 \omega$
+  $max: 96.01\%$ at $Iout = 100 mA$
 \end{frame}
 
 \begin{frame}
@@ -248,7 +247,7 @@ simulation results} &\\
 \begin{frame}
   \frametitle{Ripple vs Iout}
   \includegraphics[scale=0.6]{io-ripple.pdf}
-  $max: 25.4 mV$ at $Iout = 0.01 \omega$
+  $max: 25.4 mV$ at $Iout = 10 mA$
 \end{frame}
 
 \begin{frame}
